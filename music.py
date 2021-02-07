@@ -10,8 +10,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 @app.route('/')
 def music_discovery():
     rand = random.randint(0,2)
-    #In respective order: Post Malone, Justin Bieber, Juice WRLD
-    artists = ['246dkjvS1zLTtiykXe5h60', '1uNFoZAHBGtllmzznpCI3s', '4MCBfE4596Uoi2O4DtmEMz']
+    #In respective order: Bazzi, Frcious, Pink Sweats
+    artists = ['4GvEc3ANtPPjt1ZJllr5Zl', '0W96fH9CZR4WRGI4x3iBJs', '1W7FNibLa0O0b572tB2w7t']
     my_music=get_music_data(artists[rand])
     
     return render_template(

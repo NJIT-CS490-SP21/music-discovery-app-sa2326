@@ -3,11 +3,19 @@
 <html>
 <head>
     <link rel="stylesheet" href="{{ url_for( 'static', filename='style.css' ) }}" type="text/css" />
+    <title>Music Discovery</title>
 </head>
 <body>
-        <h3>{{all_data[0]}} by {{all_data[1]}}</h3>
+        <div class='song'>
+            <h2>{{all_data[0]}}</h2>
+            <h3>{{all_data[1]}}</h3>
         <div class='img'><img src={{all_data[2]}} /></div>
-        <h3>Preview Link: {{all_data[3]}}</h3>
+        <audio controls>
+          <source src={{all_data[3]}}>
+          Preview does not exist.
+        </audio>
+        </div>
+
 </body>
 
 </html>

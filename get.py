@@ -27,11 +27,11 @@ def get_music_data(artist_id):
     
     request=requests.get(base_url + 'artists/' + artist_id + '/top-tracks', 
         headers=headers,
-        params={'country':'US'})
+        params={'market':'US'})
     
     response=request.json()
     song_data=response['tracks'][0]
-    
+ 
     def get_song_name():
         return song_data['name']
     def get_preview_url():

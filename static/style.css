@@ -1,14 +1,18 @@
 body {
-    background-color: #f3e5f5;
+    background-image: url("https://pngimg.com/uploads/star/star_PNG76911.png");
+    background-color: #212121;
     font-family: 'Courier New', monospace;
     text-align: center;
     padding: 70px;
 }
 
-
 .img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  padding-bottom: 25px;
+}
+
+.song {
+    color:#b3b3b3;
 }
