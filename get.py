@@ -7,12 +7,12 @@ load_dotenv(find_dotenv())
 CLIENT_ID=os.getenv('CLIENT_ID')
 CLIENT_SECRET=os.getenv('CLIENT_SECRET')
 
-auth_url='https://accounts.spotify.com/api/token'
-base_url='https://api.spotify.com/v1/'
+AUTH_URL='https://accounts.spotify.com/api/token'
+BASE_URL='https://api.spotify.com/v1/'
 
 def get_music_data(artist_id):
 
-    response=requests.post(auth_url, {
+    response=requests.post(AUTH_URL, {
         'grant_type': 'client_credentials',
         'client_id': CLIENT_ID,
         'client_secret': CLIENT_SECRET,
@@ -25,7 +25,7 @@ def get_music_data(artist_id):
         'Authorization': 'Bearer {token}'.format(token=access_token)
     }
     
-    request=requests.get(base_url + 'artists/' + artist_id + '/top-tracks', 
+    request=requests.get(BASE_URL + 'artists/' + artist_id + '/top-tracks', 
         headers=headers,
         params={'market':'US'})
     

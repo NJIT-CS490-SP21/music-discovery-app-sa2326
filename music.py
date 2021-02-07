@@ -10,7 +10,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 @app.route('/')
 def music_discovery():
     rand = random.randint(0,2)
-    #In respective order: Bazzi, Frcious, Pink Sweats
+    #In respective order: Bazzi, Frocious, Pink Sweat$
     artists = ['4GvEc3ANtPPjt1ZJllr5Zl', '0W96fH9CZR4WRGI4x3iBJs', '1W7FNibLa0O0b572tB2w7t']
     my_music=get_music_data(artists[rand])
     
