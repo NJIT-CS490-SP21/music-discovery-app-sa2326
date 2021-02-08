@@ -16,8 +16,6 @@ def music_discovery():
     
     return render_template(
         "index.html",
-        num = rand,
-        my_artists = artists,
         all_data=my_music['data'],
     )
 
