@@ -52,21 +52,23 @@ def get_music_data(artist_id):
     
     return{'data': my_data}
 
-def get_lyrics(id):
+def get_lyrics(song_title):
     
-    access_token = GENIUS_ACCESS
+    access_token=GENIUS_ACCESS
     
     headers={
         'Authorization': 'Bearer {token}'.format(token=access_token)
     }
+    
+    params={'q': song_title}
 
-    request=requests.get(GENIUS_URL + 'songs/' + id,
+    request=requests.get(GENIUS_URL + 'search',
+        params=params,
         headers=headers
         )
 
     response=request.json()
-    lyrics=response['response']['song']['url']
+    lyrics=response['response']['hits'][0]['result']['url']
     print(lyrics)
     
-get_lyrics('378195')
-    
+    return{'lyrics_url': lyrics}
