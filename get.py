@@ -6,9 +6,11 @@ load_dotenv(find_dotenv())
 
 CLIENT_ID=os.getenv('CLIENT_ID')
 CLIENT_SECRET=os.getenv('CLIENT_SECRET')
+GENIUS_ACCESS = os.getenv('GENIUS_ACCESS')
 
 AUTH_URL='https://accounts.spotify.com/api/token'
 BASE_URL='https://api.spotify.com/v1/'
+GENIUS_URL = 'https://api.genius.com/'
 
 def get_music_data(artist_id):
 
@@ -49,3 +51,22 @@ def get_music_data(artist_id):
     my_data=[song, artist, image, preview]
     
     return{'data': my_data}
+
+def get_lyrics(id):
+    
+    access_token = GENIUS_ACCESS
+    
+    headers={
+        'Authorization': 'Bearer {token}'.format(token=access_token)
+    }
+
+    request=requests.get(GENIUS_URL + 'songs/' + id,
+        headers=headers
+        )
+
+    response=request.json()
+    lyrics=response['response']['song']['url']
+    print(lyrics)
+    
+get_lyrics('378195')
+    
