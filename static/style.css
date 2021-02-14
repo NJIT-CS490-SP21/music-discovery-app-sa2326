@@ -4,6 +4,7 @@ body {
     font-family: 'Courier New', monospace;
     text-align: center;
     padding: 70px;
+    color: #b3b3b3;
 }
 
 .img {
@@ -13,6 +14,11 @@ body {
   padding-bottom: 25px;
 }
 
-.song {
+a {
     color:#b3b3b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
