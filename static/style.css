@@ -1,10 +1,36 @@
 body {
     background-image: url("https://pngimg.com/uploads/star/star_PNG76911.png");
     background-color: #212121;
-    font-family: 'Courier New', monospace;
     text-align: center;
     padding: 70px;
     color: #b3b3b3;
+    padding: 10px;
+}
+
+.heading {
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+
+.heading h1 {
+    margin: 0;
+}
+
+.song {
+    font-family: 'Roboto', sans-serif;
+}
+
+.song h2 {
+    margin:0;
+    font-weight: bold;
+    font-size: 27px;
+    color: #F0E68C;
+}
+
+.song h4 {
+   margin:0;
 }
 
 .img {
@@ -17,6 +43,7 @@ body {
 a {
     color:#b3b3b3;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 a:hover {
