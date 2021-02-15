@@ -3,7 +3,7 @@
 <html>
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -12,18 +12,22 @@
     <title>Music Discovery</title>
 </head>
 <body>
-        <div class='heading'><h1>Discover.</h1></div>
+        <div class='heading'><h1>DISCOVER.</h1></div>
         <div class='song'>
-            <h2>{{all_data[0]}}</h2>
-            <h4>by {{all_data[1]}}</h4><br>
-            <div class='img'><img src={{all_data[2]}} /></div>
-            <audio controls>
-              <source src={{all_data[3]}}>
-              Preview does not exist.
-            </audio>
-            <br><br>
-            <div class='link'>
-            <a href={{lyrics}}>Lyrics</a></div>
+            {% for i in range(3) %}
+            <div class='i'>
+                <h2>{{all_data[i][0]}}</h2>
+                <h4>by {{all_data[i][1]}}</h4><br>
+                <div class='img'><img src={{all_data[i][2]}} /></div>
+                <audio controls>
+                  <source src={{all_data[i][3]}}>
+                  Preview does not exist.
+                </audio>
+                <br><br>
+                <div class='link'>
+                <a href={{lyrics[i]}}>Lyrics</a></div>
+            </div>
+            {% endfor %}
         </div>
 
 </body>

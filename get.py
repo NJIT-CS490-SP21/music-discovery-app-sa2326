@@ -33,8 +33,7 @@ def get_music_data(artist_id):
     
     response=request.json()
     song_data=response['tracks']
-    list_of_album_covers=[]
- 
+    
     def get_song_name():
         return song_data[0]['name']
     def get_preview_url():
@@ -43,7 +42,7 @@ def get_music_data(artist_id):
         return song_data[0]['album']['images'][1]['url']
     def get_artist_name():
         return song_data[0]['artists'][0]['name']
-            
+
 
     song=get_song_name()
     artist=get_artist_name()
@@ -51,7 +50,7 @@ def get_music_data(artist_id):
     preview=get_preview_url()
     
     my_data=[song, artist, image, preview]
-    
+
     return{'data': my_data}
 
 def get_lyrics(song_title):
@@ -71,6 +70,5 @@ def get_lyrics(song_title):
 
     response=request.json()
     lyrics=response['response']['hits'][0]['result']['url']
-    print(lyrics)
     
     return{'lyrics_url': lyrics}

@@ -1,25 +1,27 @@
 body {
     background-image: url("https://pngimg.com/uploads/star/star_PNG76911.png");
     background-color: #212121;
-    text-align: center;
-    padding: 70px;
     color: #b3b3b3;
-    padding: 10px;
-}
-
-.heading {
-    font-family: 'DM Serif Display', serif;
-    text-align: center;
-    font-size: 35px;
-    padding-bottom: 15px;
-}
-
-.heading h1 {
-    margin: 0;
+    padding: 15px;
 }
 
 .song {
     font-family: 'Roboto', sans-serif;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.heading h1 {
+    margin: 0;
 }
 
 .song h2 {
@@ -34,7 +36,6 @@ body {
 }
 
 .img {
-  display: block;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 25px;
@@ -49,3 +50,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+
